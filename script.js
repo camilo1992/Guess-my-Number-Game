@@ -11,6 +11,8 @@ const displayMessage = function (message) {
 document.querySelector(`.check`).addEventListener(`click`, function () {
   let guess = Number(document.querySelector(`.guess`).value);
   console.log(guess);
+  document.querySelector('.guess').value = ``;
+  document.querySelector('.guess').focus();
 
   if (!guess) {
     displayMessage(`No number!`);
@@ -19,6 +21,8 @@ document.querySelector(`.check`).addEventListener(`click`, function () {
     document.querySelector(`.number`).textContent = secretNumber;
     document.querySelector(`body`).style.backgroundColor = `#60b347`;
     document.querySelector(`.number`).style.width = `30rem `;
+
+    document.querySelector(`.check`).hidden = true;
 
     if (score > highscore) {
       highscore = score;
@@ -35,6 +39,8 @@ document.querySelector(`.check`).addEventListener(`click`, function () {
 });
 
 document.querySelector(`.again`).addEventListener(`click`, function () {
+  document.querySelector(`.check`).hidden = false;
+  document.querySelector(`.guess`).focus();
   document.querySelector(`body`).style.backgroundColor = `#222`;
   document.querySelector(`.number`).textContent = `?`;
   document.querySelector(`.number`).style.width = `15rem`;
