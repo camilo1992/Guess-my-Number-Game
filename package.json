@@ -1,0 +1,15 @@
+{
+  "name": "05-guess-my-number",
+  "version": "1.0.0",
+  "description": "Game",
+  "dependencies": {
+    "parcel": "^2.0.0-rc.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Cristian Camilo",
+  "license": "ISC"
+}
