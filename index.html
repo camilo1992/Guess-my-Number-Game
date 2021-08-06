@@ -11,7 +11,6 @@
     <header>
       <h1>Guess My Number!</h1>
       <p class="between">(Between 1 and 20)</p>
-      <button class="btn again">Again!</button>
       <div class="number">?</div>
     </header>
     <main>
@@ -25,7 +24,12 @@
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
         </p>
+        <div class="overlay hidden"></div>
       </section>
+      <div class="modal hidden">
+        <p class="message2" style="font-size: 30px">This is an improvement</p>
+        <button class="btn again">Again!</button>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
